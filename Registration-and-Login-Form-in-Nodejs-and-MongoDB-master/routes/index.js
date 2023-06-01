@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var User = require('../models/user');
+let express = require('express');
+let router = express.Router();
+let User = require('../models/user');
 
 router.get('/', function (req, res, next) {
 	return res.render('index.ejs');
@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function(req, res, next) {
 	console.log(req.body);
-	var personInfo = req.body;
+	let personInfo = req.body;
 
 
 	if(!personInfo.email || !personInfo.username || !personInfo.password || !personInfo.passwordConf){
@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
 
 			User.findOne({email:personInfo.email},function(err,data){
 				if(!data){
-					var c;
+					let c;
 					User.findOne({},function(err,data){
 
 						if (data) {
@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
 							c=1;
 						}
 
-						var newPerson = new User({
+						let newPerson = new User({
 							unique_id:c,
 							email:personInfo.email,
 							username: personInfo.username,
@@ -62,14 +62,11 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/login', function (req, res, next) {
-	//console.log(req.body);
 	User.findOne({email:req.body.email},function(err,data){
 		if(data){
 			
 			if(data.password==req.body.password){
-				//console.log("Done Login");
 				req.session.userId = data.unique_id;
-				//console.log(req.session.userId);
 				res.send({"Success":"Success!"});
 				
 			}else{
@@ -89,7 +86,6 @@ router.get('/profile', function (req, res, next) {
 		if(!data){
 			res.redirect('/');
 		}else{
-			//console.log("found");
 			return res.render('data.ejs', {"name":data.username,"email":data.email});
 		}
 	});
@@ -114,14 +110,11 @@ router.get('/forgetpass', function (req, res, next) {
 });
 
 router.post('/forgetpass', function (req, res, next) {
-	//console.log('req.body');
-	//console.log(req.body);
 	User.findOne({email:req.body.email},function(err,data){
 		console.log(data);
 		if(!data){
 			res.send({"Success":"This Email Is not regestered!"});
 		}else{
-			// res.send({"Success":"Success!"});
 			if (req.body.password==req.body.passwordConf) {
 			data.password=req.body.password;
 			data.passwordConf=req.body.passwordConf;

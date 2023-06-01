@@ -19,28 +19,87 @@
     <nav>
         <div class="container">
             <img src="/frontend/logo/vega-green.png" class="logo">
-        </div>
-        <div class="search-bar">
-            <span class="material-symbols-sharp">search</span>
-            <input type="search">
-        </div>
-        <div class="profile-area">
-            <div class="theme-btn">
-                <span class="material-symbols-sharp">light_mode</span>
-                <span class="material-symbols-sharp">dark_mode</span>
+            <div class="search-bar">
+                <span class="material-symbols-sharp">search</span>
+                <input type="search" placeholder="Search">
             </div>
-            <div class="profile">
-                <div class="profile-photo">
-                    <img src="/frontend/img/pp.jpg">
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-symbols-sharp" active>light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
                 </div>
-                <h5>Med</h5>
-                <span class="material-symbols-sharp">expand_more</span>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="/frontend/img/pp.jpg">
+                    </div>
+                    <h5>Med</h5>
+                    <span class="material-symbols-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
             </div>
-            <button id="menu-btn">
-                <span class="material-symbols-sharp">menu</span>
-            </button>
         </div>
     </nav>
     <!-- End navbar -->
+
+    <main>
+        <aside>
+            <button id="close-btn">
+                <span class="material-symbols-sharp">close</span>
+            </button>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">payments</span>
+                    <h4>Transaction</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp"><span class="material-symbols-sharp">
+                        build
+                        </span></span>
+                    <h4>Tools</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">group</span>
+                    <h4>Users</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">monitoring</span>
+                    <h4>Analytics</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">help_center</span>
+                    <h4>Help Center</h4>
+                </a>
+            </div>
+            <!-- End Sidebar -->
+            <div class="updates">
+                <span class="material-symbols-sharp">update</span>
+                <h4>Update Available</h4>
+                <small>Security Updates</small>
+                <small>General Updates</small>
+                <a href="#">Update Now</a>
+            </div>
+        </aside>
+        <!-- End Aside -->
+        <section class="middle">
+
+        </section>
+        <!-- End Middle -->
+        <section class="right">
+
+        </section>
+        <!-- End right -->
+    </main>
+    <!-- End aside -->
 </body>
 </html>
