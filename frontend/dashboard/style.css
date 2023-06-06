@@ -209,6 +209,7 @@ nav .profile-area .profile{
     display: flex;
     gap: 1rem;
     align-items: center;
+    cursor: pointer;
 }
 
 
@@ -263,6 +264,7 @@ main aside .sidebar a span{
 main aside .sidebar a.active{
     background: var(--color-white);
     color: var(--color-primary);
+    border-radius: var(--border-radius-1);
 }
 
 main aside .sidebar a.active:before{
