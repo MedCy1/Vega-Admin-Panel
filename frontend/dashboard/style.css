@@ -345,6 +345,15 @@ main .monthly-report h1{
     font-size: 1.8rem;
 }
 
+main .report{
+    background: var(--color-white);
+    padding: 15px;
+    border-radius: var(--border-radius-1);
+}
+
+main .monthly-report details{
+    cursor: pointer;
+}
 /* Fast Payment */
 main .fast-payment{
     margin-top: 2rem;
