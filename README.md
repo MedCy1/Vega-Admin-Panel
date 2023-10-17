@@ -14,13 +14,3 @@ Intégrer Tauri
 
 
 Idée de project
-
-Checker de Numlist
-Amazon
-(ajouté d'autre plateforme)
-
-Autoshop de log
-Pouvoir gérée le stock de logs depuis le site
-Pouvoir crée ou delete un type de compte
-
-Vega ne c'est pas fait en 2 semaines
